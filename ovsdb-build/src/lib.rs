@@ -113,6 +113,12 @@ impl Builder {
         Self::default()
     }
 
+    /// Set out_dir
+    pub fn set_out_dir(mut self,out:String)-> Self{
+        self.out_dir = Some(PathBuf::from(out));
+        self
+    }
+
     fn generate_modules(&self, schema: &Schema, directory: &Path) -> Result<()> {
         std::fs::create_dir_all(directory)?;
 
@@ -141,7 +147,7 @@ impl Builder {
     {
         let mut output_dir = match &self.out_dir {
             Some(dir) => dir.to_path_buf(),
-            None => match std::env::var("OUT_DIR") {
+            None => match std::env::current_dir() {
                 Ok(val) => PathBuf::from(val),
                 Err(_) => todo!(),
             },
