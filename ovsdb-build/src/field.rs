@@ -132,6 +132,10 @@ impl Field {
                 attributes.add("#[serde(rename = \"type\")]");
                 name_to_ident("kind")
             }
+            "match" => {
+                attributes.add("#[serde(rename = \"match\")]");
+                name_to_ident("matching")
+            }
             _ => name_to_ident(name),
         };
 
