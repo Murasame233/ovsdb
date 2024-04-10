@@ -1,0 +1,1 @@
+ovsdb-server $(pwd)/dbs/nb.db --remote=punix:$(pwd)/dbs/ovnnb_db.sock --unixctl=$(pwd)/dbs/ovsdb-server.ctl
