@@ -12,7 +12,7 @@ license = "MIT"
 readme = "README.md"
 
 [dependencies]
-ovsdb = { version = "0.0.6", path = "../ovsdb" }
+ovsdb = { version = "0.0.7", path = "../ovsdb" }
 convert_case = "0.6.0"
 quote = "1.0"
 proc-macro2 = "1.0"

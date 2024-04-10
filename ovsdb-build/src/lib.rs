@@ -131,7 +131,7 @@ impl Builder {
 
             mod_file.write_all(
                 format!(
-                    "mod {table_name};\npub use {table_name}::*;\n",
+                    "pub mod {table_name};\n",
                     table_name = &table.name().to_case(Case::Snake)
                 )
                 .as_bytes(),
