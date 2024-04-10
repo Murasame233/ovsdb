@@ -1,5 +1,5 @@
 [workspace]
-members = ["ovsdb", "ovsdb-build"]
+members = [ "ovn-schema","ovsdb", "ovsdb-build"]
 resolver = "2"
 
 [workspace.dependencies]
